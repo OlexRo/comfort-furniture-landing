@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/scss/dop_style.css">
+    <link rel="stylesheet" href="/scss/main_style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="theme-color" content="#ffffff">
+    <title>The Comfort</title>
+</head>
+<body>
+    <!--Контейнер-->
+    <div class="wrapper">
+    <!--Шапка сайта-->
+        <header class="header js-header">
+            <!--Верхняя часть шапки-->
+            <div class="header_top">
+                <div class="header_left">
+                    <div class="left"><a href="#">Иркутск</a></div>
+                    <div class="left"><a href="#">Обратная связь</a></div>
+                </div>
+                <!--Строка поиска-->
+                <div class="header_right">
+                    <div class="search">
+                        <div class="icon"><i class='bx bx-search'></i></div>
+                            <div class="input">
+                            <input type="text" placeholder="Поиск" id="mySearch">
+                            <span class="clean">X</span>
+                        </div>
+                    </div>
+                    <!--Окно покупки-->
+                    <div class="right icon">
+                        <button id="open-modal_2" class="icon"><i class='bx bxs-shopping-bag'></i></button>
+                        <div class="modal_2" id="mymodal_2">
+                            <div class="modal-window_2">
+                                <button id="btn-close_2">Продолжить покупки</button>
+                                <button></button>
+                                <h1>Мои покупки</h1>
+                                <h2>Промокод</h2>
+                                    <div class="promo_big">
+                                        <input type="text" placeholder="Введите промокод">
+                                        <button class="promo">Применить</button>
+                                    </div>
+                                    <div class="oplata">
+                                        <h3>Итог</h3>
+                                        <h3>0.00 Р</h3>
+                                    </div>
+                                <div class="opl-2"><button class="opl">Оплатить</button></div>
+                            </div>
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                    <!--Окно регистрации-->
+                    <div class="right icon">
+                        <button id="open-modal" class="icon"><i class='bx bxs-user'></i></button>
+                        <div class="modal" id="mymodal">
+                            <div class="modal-window">
+                                <button id="btn-close">X</button>
+                                <h1>Регистрация</h1>
+                                <h2>Введите Логин</h2>
+                                <div class="login"><input type="text" placeholder="Введите логин"></div>
+                                <h2>Введите Пароль</h2>
+                                <div class="login"><input type="text" placeholder="Введите пароль"></div>
+                                <h2>Подтвердите Пароль</h2>
+                                <div class="login"><input type="text" placeholder="Подтвердите пароль"></div>
+                                <button class="regist">Log in</button>
+                            </div>
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                    <div class="right"><a href="#">Доставка</a></div>
+                    <div class="right"><a href="/pages/kontacs_page.htm">Информация</a></div>
+                </div>
+            </div>
+            <!--Нижняя часть шапки-->
+            <div class="header_bottom">
+                <!--Левая часть выпадающего меню-->
+                <div class="right_r">
+                    <ol class="menu">
+                        <li><a href="/pages/catalog_page.htm">Диваны</a></li>
+                        <li><a href="#">Шкафы</a></li>
+                        <li><a href="#">Столы</a></li>
+                    </ol>
+                </div>
+                <!--Логотип шапки-->
+                <div class="logo"><a href="/pages/main_page.htm"><img src="/img/Logo.png" alt="Фото"></a></div>
+                <!--Правая часть выпадающего меню-->
+                <div class="right_r">
+                    <ol class="menu">
+                        <li><a href="#">Фурнитуры</a></li>
+                        <li><a href="#">Кровати</a></li>
+                        <li><a href="#">Акции</a>
+                            <ol>
+                                <li><a href="#">BLACK FRIDAY</a></li>
+                                <li><a href="#">ТЕТЯ В ПОДАРОК</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </header>
+    <!--Прослойка между header и main-->  
+        <div class="prosl"></div>
+    <!--Основная часть сайта-->      
+        <main>
+            <div class="otsp"></div>
+            <div class="tovar_block">
+                <div class="tovar_conter">
+                    <div class="tovar">
+                        <div class="logo_tovar"><img data-tooltip="Диван тройной цельный в обивке из бежевой матовой кожи SANORE из новой коллекции" src="/img/tovar_1.jpg" alt="Товар"></div>
+                        <h1>Диван Di Riposo</h1>
+                        <h2>итал. Benessere</h2>
+                        <p>150 000 ₽</p>
+                        <button><a href="/pages/card_tovar_page.htm">Перейти к опиcанию товара</a></button>
+                    </div>
+                    <div class="tovar">
+                        <div class="logo_tovar"><img data-tooltip="Прямой диван-кровать – это модель с дружелюбным характером и расслабленным настроением" src="/img/tovar_5.jpg" alt="Товар"></div>
+                        <h1>Диван Bellezza</h1>
+                        <h2>итал. Benessere</h2>
+                        <p>266 000 ₽</p>
+                        <button>Перейти к опиcанию товара</button>
+                    </div>
+                    <div class="tovar">
+                        <div class="logo_tovar"><img data-tooltip="Мягкие подушки сиденья созданы на основе пены ELAX или пены Memory foam" src="/img/tovar_6.jpg" alt="Товар"></div>
+                        <h1>Диван Armonia</h1>
+                        <h2>итал. Benessere</h2>
+                        <p>194 000 ₽</p>
+                        <button>Перейти к опиcанию товара</button>
+                    </div>
+                    <div class="tovar">
+                        <div class="logo_tovar"><img data-tooltip="Подвижные валики на спинке, регулирующие глубину посадки и высоту подушек, утяжки и прострочки на обивке" src="/img/tovar_7.jpg" alt="Товар"></div>
+                        <h1>Диван Amore</h1>
+                        <h2>итал. Benessere</h2>
+                        <p>273 000 ₽</p>
+                        <button>Перейти к опиcанию товара</button>
+                    </div>
+                </div>
+                <div class="tovar_conter">
+                    <div class="tovar">
+                        <div class="logo_tovar"><img data-tooltip="В результате диван соединяет в себе внешнюю строгость и геометричность с мягкостью и обещанием уютного отдыха" src="/img/tovar_8.jpg" alt="Товар"></div>
+                        <h1>Диван Papillon</h1>
+                        <h2>фран. Raphaël</h2>
+                        <p>150 000 ₽</p>
+                        <button>Перейти к опиcанию товара</button>
+                    </div>
+                    <div class="tovar">
+                        <div class="logo_tovar"><img data-tooltip="Притягательный внешний вид формируется за счет крупных, объемных делений сиденья и спинки" src="/img/tovar_10.jpg" alt="Товар"></div>
+                        <h1>Диван Écureuil</h1>
+                        <h2>фран. Raphaël</h2>
+                        <p>176 000 ₽</p>
+                        <button>Перейти к опиcанию товара</button>
+                    </div>
+                    <div class="tovar">
+                        <div class="logo_tovar"><img data-tooltip="Плавные обводы и высокие металлические опоры формируют изящный, дружелюбный и полностью законченный образ" src="/img/tovar_11.jpg" alt="Товар"></div>
+                        <h1>Диван Velours</h1>
+                        <h2>фран. Raphaël</h2>
+                        <p>154 000 ₽</p>
+                        <button>Перейти к опиcанию товара</button>
+                    </div>
+                    <div class="tovar">
+                        <div class="logo_tovar"><img data-tooltip=" Плавные обводы и высокие металлические опоры формируют изящный, дружелюбный и полностью законченный образ" src="/img/tovar_12.jpg" alt="Товар"></div>
+                        <h1>Диван Ballade</h1>
+                        <h2>фран. Raphaël</h2>
+                        <p>143 000 ₽</p>
+                        <button>Перейти к опиcанию товара</button>
+                    </div>
+                </div>
+                <div class="tovar_conter">
+                    <div class="tovar">
+                        <div class="logo_tovar"><img data-tooltip="Диван тройной цельный в обивке из бежевой матовой кожи SANORE из новой коллекции." src="/img/tovar_13.jpg" alt="Товар"></div>
+                        <h1>Диван Сorail</h1>
+                        <h2>норв. Ekorn</h2>
+                        <p>250 000 ₽</p>
+                        <button>Перейти к опиcанию товара</button>
+                    </div>
+                    <div class="tovar">
+                        <div class="logo_tovar"><img data-tooltip="Две подушки спинки дополнены каплевидными съемными подлокотниками и помещены на основание, визуально поделенное на две части" src="/img/tovar_14.jpg" alt="Товар"></div>
+                        <h1>Диван Isflak</h1>
+                        <h2>норв. Ekorn</h2>
+                        <p>276 000 ₽</p>
+                        <button>Перейти к опиcанию товара</button>
+                    </div>
+                    <div class="tovar">
+                        <div class="logo_tovar"><img data-tooltip=" С фронтальной стороны и по бокам сиденья имеются декоративные накладки, придающие ритм и изюминку всему внешнему виду дивана" src="/img/tovar_15.jpg" alt="Товар"></div>
+                        <h1>Диван Byrde</h1>
+                        <h2>норв. Ekorn</h2>
+                        <p>254 000 ₽</p>
+                        <button>Перейти к опиcанию товара</button>
+                    </div>
+                    <div class="tovar">
+                        <div class="logo_tovar"><img data-tooltip="Внешний вид с двумя подушками спинки и округлым подлокотником делает модель универсальной для использования в различных помещениях" src="/img/tovar_16.jpg" alt="Товар"></div>
+                        <h1>Диван Bryst</h1>
+                        <h2>норв. Ekorn</h2>
+                        <p>243 000 ₽</p>
+                        <button>Перейти к опиcанию товара</button>
+                    </div>
+                </div>
+                <div class="tovar_conter">
+                    <div class="tovar">
+                        <div class="logo_tovar"><img data-tooltip="Спинка состоит из трех подушек, украшенных утяжками и прострочками" src="/img/tovar_17.jpg" alt="Товар"></div>
+                        <h1>Диван</h1>
+                        <h2>австр. Büste</h2>
+                        <p>260 000 ₽</p>
+                        <button>Перейти к опиcанию товара</button>
+                    </div>
+                    <div class="tovar">
+                        <div class="logo_tovar"><img data-tooltip="Этот диван моментально приковывает к себе внимание, удивляет смелостью решений и высоким уровнем комфорта" src="/img/tovar_18.jpg" alt="Товар"></div>
+                        <h1>Диван Kirsche</h1>
+                        <h2>австр.Büste</h2>
+                        <p>166 000 ₽</p>
+                        <button>Перейти к опиcанию товара</button>
+                    </div>
+                    <div class="tovar">
+                        <div class="logo_tovar"><img data-tooltip=" Сиденье жесткое, почти не продавливается, зато из него получается отличное спальное место – широкое и ровное, с хорошей поддержкой спины" src="/img/tovar_19.jpg" alt="Товар"></div>
+                        <h1>Диван Scheinen</h1>
+                        <h2>австр. Büste</h2>
+                        <p>264 000 ₽</p>
+                        <button>Перейти к опиcанию товара</button>
+                    </div>
+                    <div class="tovar">
+                        <div class="logo_tovar"><img data-tooltip="Модель позволяет ежедневно наслаждаться комфортом и уютом, располагает к размеренному темпу жизни – без спешки и суеты" src="/img/tovar_20.jpg" alt="Товар"></div>
+                        <h1>Диван Theater</h1>
+                        <h2>австр. Büste</h2>
+                        <p>183 000 ₽</p>
+                        <button>Перейти к опиcанию товара</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    <!--Нижняя часть сайта-->   
+        <footer>
+            <h1>Социальные сети</h1>
+            <div class="f_top">
+                <div class="niz">
+                    <ol>
+                        <li>О компании</li>
+                        <li>Доставка</li>
+                        <li>Оплата</li>   
+                        <li>Гарантия и Возврат</li>    
+                    </ol>
+                </div>
+                <div class="niz">
+                    <div class="icon niz_v"><i class='bx bxl-vk' ></i></div>
+                    <div class="icon niz_v"><i class='bx bxl-twitter' ></i></div>
+                    <div class="icon niz_v"><i class='bx bxl-facebook' ></i></div>
+                    <div class="icon niz_v"><i class='bx bxl-telegram' ></i></div>
+                </div>
+                <div class="niz">
+                    <ol>
+                        <li>тел. 88005553535</li>
+                        <li>E-mail: ssysys@gmai.com</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="f_center">
+                <div class="logo_fot"><img src="/img/Logo.png" alt="Фото"></div>
+                <div class="f_center_f">2</div>
+            </div>
+            <div class="f_bottom">ⓒ 2023 OOO “The Comfort”</div>
+        </footer>
+        <script src="/js/index.js"></script>
+    </div>
+</body>
+</html>

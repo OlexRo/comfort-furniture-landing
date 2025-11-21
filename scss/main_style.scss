@@ -1,0 +1,677 @@
+$color-background-main: #161616;
+$color-text-header-top: #FFFFFF;
+$color-background-header-top: #000000;
+$color-icon-fon: #7F7F7F;
+$color-background-header-bottom: #161616;
+$color-text-header-bottom: #7F7F7F;
+$color-text-on-main-foto: #FFFFFF;
+$color-zagolovok: #FFFFFF;
+$color-main-text: #7F7F7F;
+$color-background-footer: #000000;
+$color-zagolovok-footer: #FFFFFF;
+$color-footer-text: #7F7F7F;
+$color-block: #252525;
+@import url('https://fonts.googleapis.com/css2? family= Noto+Sans & display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+    list-style-type: none;
+}
+html, body {overflow-x: hidden; background: $color-background-main;}
+body {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;}
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;}
+/*Контейнер*/
+.wrapper{
+    width: 100%;
+    height: auto;
+    a{
+        text-decoration: none;
+        color: $color-text-header-top;}
+    .icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: grey;
+        font-size: 4vh;
+        border-radius: 100%;
+        width: 5vh;
+        height: 5vh;}
+    /*Прослойка между header м main*/
+    .prosl{height: 20vh;}
+    /*Шапка сайта*/
+    header{
+        position: absolute;
+        transition: all 1s ease;
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        /*Верхняя часть шапки*/
+        .header_top{
+            display: flex;
+            justify-content: space-between;
+            background: $color-background-header-top;
+            padding: 1vh;
+            .header_left{
+                img{
+                    display: none;
+                }
+                display: flex;
+                align-items: center;
+                height: 5vh;
+                .left{
+                    margin: 0px 0vw 0px 1vw;}}
+            .header_right{
+                display: flex;
+                align-items: center;
+                height: 5vh;
+                .right{
+                    margin: 0px .5vw 0px 1vw;}}}
+            /*Нижняя часть сайта*/
+            .header_bottom{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $color-background-header-bottom;
+                height: 15vh;
+                /*Выпадающее меню*/
+                .right_r{
+                    display: flex;
+                    margin: 1vh;
+                    .menu{
+                        display: flex;
+                        li{
+                            width: 10vw;
+                            position: relative;
+                            &:hover{
+                                border-radius: 10px;
+                                background: #1b1b1b;
+                            }
+                            &:hover ol{
+                                border-radius: 0px 0px 10px 10px;
+                                background: #1b1b1b;
+                                display: block;}}
+                        a{
+                            font-size: 2vh;
+                            color: $color-text-header-bottom;
+                            display: block;
+                            text-align: center;
+                            line-height: 4vh;
+                            padding: 0 1vh;
+                            height: 4vh;
+                            transition: all 0.5s;
+                            &:hover{
+                                border-radius: 10px;
+                                background: #222121;}}
+                        ol{
+                            position: absolute;
+                            left: 0;
+                            top: 100%;
+                            display: none;
+                            padding: 0;}}}
+                /*Логотип Шапки*/
+                .logo{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 13vh;
+                    height: 13vh;
+                    margin: 0px 1vw 0px 1vw;
+                    img{
+                        margin: 2vh 1vh 0px 0px;
+                        width: 50vh;
+                        height: 28vh;}}}}
+    main{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        /*Начальоне фото*/
+        img{
+            width: 100vw;
+            height: 80vh;}
+        /*Приветсивие*/
+        .hello_cont{
+            width: 100%;
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .hello{
+                h1{
+                    color: $color-text-on-main-foto;
+                    line-height: 10vh;}
+                width: 60%;
+                line-height: 40px;
+                font-size: 20px;
+                color: $color-main-text;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;}}
+        /*Популярные категории*/
+        .popul_categor{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            h1{
+                font-size: 40px;
+                color: $color-zagolovok;
+                line-height: 60px;}
+            .categor{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+                height: 30vh;
+                .tema{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 4vh;
+                    width: 18vw;
+                    height: 20vh;
+                    img{
+                        background: #000000;
+                        border-radius: 2vh;
+                        transition: 1s;
+                        width: 18vw;
+                        height: 20vh;
+                        &:hover{
+                            transform: scale(1.1)
+                        }}
+                    button {
+                        position: absolute;
+                        font-size: 3vh;
+                        color: $color-zagolovok;
+                        background: #00000000;
+                        transition: .2s;
+                        border: .6vh solid $color-text-on-main-foto;
+                        width: 20vh;
+                        height: 5vh;
+                        &:hover{
+                            transform: scale(1.01);
+                            border: .6vh solid rgba(255, 255, 255, 0.253);
+                            color: rgb(255, 255, 255);}}}}}
+        /*Cамые продоваемые товары*/
+        .tovar_block{
+            text-align: center;
+            width: 100%;
+            h1{
+                margin-top: 3vh;
+                font-size: 4vh;
+                color: $color-zagolovok;}
+            .tovar_conter{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 60vh;}
+            .tovar{
+                display: flex;
+                flex-direction: column;
+                justify-content: top;
+                align-items: center;
+                overflow: hidden;
+                width: 18vw;
+                height: 50vh;
+                margin: 4vh;
+                img{
+                    position: relative;
+                    border-radius: 2vh;
+                    display: inline-block;
+                    width: 18vw;
+                    height: 20vh;}
+                h1{
+                    text-align: center;
+                    color: $color-zagolovok;
+                    width: 36vh;
+                    margin: 2vh 2vh 0vh 2vh; 
+                    padding-bottom: 1.5vh;
+                    border-bottom: .4vh solid $color-main-text;}
+                h2{
+                    font-size: 1.5vh;
+                    margin: 1vh;
+                    color: $color-zagolovok;
+                    transition: .8s;}
+                p{
+                    width: 60%;
+                    color: $color-main-text;
+                    font-size: 2vh;
+                    margin: 1.2vh;
+                    text-align: center;}
+                button{
+                    border: .5vh solid $color-text-on-main-foto;
+                    padding: 1.7vh;
+                    transition: .2s;
+                    color: $color-zagolovok;
+                    font-size: 1.5vh;
+                    background: rgba(0, 0, 0, 0);
+                    &:hover{
+                        transform: scale(1.01);
+                        border: .6vh solid rgba(255, 255, 255, 0.253);
+                        color: rgb(255, 255, 255);
+                    }}}}}
+    /*Подвал сайиа*/
+    footer{
+        display: flex;
+        flex-direction: column;
+        background: black;
+        height: 33vh;
+        h1{
+            margin-top: 1vh;
+            color: white;
+            text-align: center;
+            font-size: 2vh;
+            height: 0vh;}
+        /*Верхний контент подвала*/
+        .f_top{
+            display: flex;
+            justify-content: space-around;
+            margin: 2vh;
+            .niz{
+                display: flex;
+                margin: 1vh;
+                justify-content: center;
+                line-height: 3vh;
+                color: $color-main-text;
+                width: 30vh;
+                height: 7vh;}
+            .niz_v{margin: 1vh; color: #000000;}
+            ol{
+                width: 30vh;
+                text-align: center;}}
+        /*Центральный контент подвала*/
+        .f_center{
+            width: 100%;
+            height: 13vh;
+            .f_center_f{
+                margin: 10vh 1vh 0vh 0vh;
+                border-bottom: 0.4vh solid rgb(255, 255, 255);}
+            .logo_fot{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    position: absolute;
+                    margin-top: 15vh;
+                    width: 30vh;
+                    height: 20vh;}}}
+        /*Нижний контент подвала*/
+        .f_bottom{
+            margin-left: 5vh;
+            margin-top: 2vh;
+            color: white;}}}
+/*Анимация при скролле*/           
+header.fixed {position: fixed; animation: show_header 1s;}
+@keyframes show_header {0%{opacity: 0; top: 0px} 100%{opacity: 1;top: 100}}
+/*Всплывающая подсказка*/ 
+.tooltip {
+    position: fixed;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    transition: all 1s ease;
+    align-items: center;
+    border-radius: 10px;
+    line-height: 30px;
+    text-align: center;
+    color: $color-main-text;
+    width: 300px;
+    height: 200px;
+    background: rgba(36, 35, 35, 0.952);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);}
+/*Анимация выезжающего фото*/    
+@keyframes foto_dvish{
+    0%{margin-left: -1000px;}
+    100%{margin-left: 0px;}}
+/*Стараница карточки товара*/    
+.foto_tovar{
+    background: $color-background-footer;
+    overflow: hidden;
+    margin-top: 2vh;
+    display: flex;
+    width: 100%;
+    .main_foto_tovar{
+        margin: 50px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 100vh;
+        height: 70vh;
+        img{
+            animation: foto_dvish 2s ease;
+            width: 500vh;
+            height: 110vh;}}
+    .opisanie_tovara{
+        color: $color-main-text;
+        padding: 50px;
+        font-size: 1.9vh;
+        line-height: 4.6vh;
+        text-align: center;
+        h1{
+            font-size: 6vh;
+            line-height: 8vh;
+            margin-bottom: 4vh;
+            color: $color-zagolovok}}}
+/*Характеристики товара*/    
+.haracterists{
+    margin: 5vh 10vh 10vh 10vh;
+    display: flex;
+    padding: 5vh;
+    width: 90%;
+    height: 70vh;
+    h1{
+        color: $color-zagolovok;
+        font-size: 3vh;
+        margin-bottom: 3vh;}
+    .big_cena{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: $color-block;
+        border-radius: 2vh;
+        margin: 0vh 2vh 0vh 0vh;
+        width: 60vh;
+        height: 60vh;
+        h1{
+            text-align: center;
+            color: $color-main-text;
+            font-size: 2.5vh;
+            width: 90%;
+            border-bottom: 4px solid $color-main-text;
+            padding: 0vh 0vh 2vh 0vh;
+            margin: 4vh;}
+        .little_cena{
+            width: 90%;
+            height: 50vh;}
+        .little_cena{
+            padding: 4vh;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            line-height: 20vh;
+            align-items: center;
+            h2{
+                font-size: 4vh;
+                line-height: 5vh;
+                text-align: center;
+                color: $color-zagolovok;}}
+            .cena_t{
+                color: $color-zagolovok;
+                font-size: 4vh;}
+            button{
+                margin: -4vh 0vh 7vh 0vh;
+                height: 100px;
+                width: 30vh;
+                padding: 1.5vh;
+                color: $color-zagolovok;
+                background: #000000;
+                border: 0.5vh solid white;
+                font-size: 2.5vh;
+                &:hover{
+                    transform: scale(1.01);
+                    border: .6vh solid rgba(255, 255, 255, 0.253);
+                    color: rgb(255, 255, 255)}}
+            .one_click{
+                background: rgba(0, 0, 0, 0);
+                border: 0.5vh solid white;}}
+    .dop_blocks{
+        margin-top: 5.3vh;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .Block_harak{
+            width: 50vh;
+            height: 29vh;
+            margin: 1vh;
+            padding: 4vh;
+            background: $color-block;
+            border-radius: 2vh}
+            .har{
+                display: flex;
+                flex-direction: column;
+                h5{
+                    color: $color-zagolovok;
+                    font-size: 2vh;
+                    margin-bottom: 2vh;
+                    i{padding-right: 1vh}}
+                .spisok{
+                    line-height: 5vh;
+                    color: $color-main-text;
+                    font-size: 2vh;}}}}
+/*Страница контактов*/    
+.sectin_two{
+    .foto_sec{
+        margin-bottom: 10vh;
+        img{
+            width: 100%;
+            height: 50vh}
+        .nadpis{
+            color: $color-zagolovok;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            height: 50vh;
+            font-size: 6vh;
+        }}
+    .podders{
+        padding: 2vh;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        .one{padding: 3vh;}
+        h1{
+            font-size: 3vh;
+            color: $color-zagolovok;
+            text-align: center}
+        .func{
+            display: flex;
+            margin-top: 2vh;
+            height: 10vh;
+            justify-content: center;
+            align-items: center;
+            margin: 5vh;
+            .opc{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100vh;
+                margin: 10vh;
+                h2{
+                    color: $color-zagolovok;
+                    font-size: 6vh;
+                    width: 30vh;
+                    text-align: center}
+                p{
+                    color: $color-main-text;
+                    font-size: 2vh;
+                    line-height: 3vh;
+                    text-align: center}}}}}
+/*Адаптация под мобилку Бета версия*/    
+@media only screen and (max-width: 404px) and (max-height: 698px) {
+    body{width: 100%; overflow: hidden;}
+    .wrapper{
+        width: 100%;
+        height: 165vh;
+        .adapt{visibility: hidden}
+        a{text-decoration: none; color: $color-text-header-top;}
+        .icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: grey;
+            font-size: 3vh;
+            border-radius: 100%;
+            width: 4vh;
+            height: 4vh}
+        /*Прослойка между header м main*/
+        .prosl{height: 20vh;}
+        /*Шапка сайта*/
+        header{
+            position: absolute;
+            transition: all 1s ease;
+            width: 100%;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            /*Верхняя часть шапки*/
+            .header_top{
+                display: flex;
+                justify-content: space-between;
+                background: $color-background-header-top;
+                padding: 1vh;
+                width: 100%;
+                .header_left{
+                    width: 5vh;
+                    img{
+                        margin-top: 1vh;
+                        display: flex;
+                        width: 20vh;
+                        height: 10vh;}
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 5vh;
+                    .left{display: none;}}
+                .header_right{
+                    width: 10vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 5vh;
+                    .right{border: none;}}
+                    .search{width: 4vh; height: 4vh; margin-right: 12%;}}
+                /*Нижняя часть сайта*/
+                .header_bottom{
+                    visibility: hidden;}}
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: auto;
+            /*Начальоне фото*/
+            img{
+                margin-top: -13vh;
+                width: 100%;
+                height: 40vh;}
+            /*Приветсивие*/
+            .hello_cont{visibility: hidden;}
+            /*Популярные категории*/
+            .popul_categor{
+                margin-top: -55vh;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 60vh;
+                h1{visibility: hidden;}
+                .categor{
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    width: 80%;
+                    height: 60%;
+                    .tema{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        margin: 4vh;
+                        width: 100%;
+                        height: 20vh;
+                        margin-bottom: -5%;
+                        img{
+                            background: #000000;
+                            border-radius: 2vh;
+                            transition: 1s;
+                            width: 100%;
+                            height: 100%;
+                            &:hover{
+                                transform: scale(1.1)
+                            }}
+                        button {
+                            font-size: 3vh;
+                            color: $color-zagolovok;
+                            background: #00000000;
+                            transition: .2s;
+                            border: .6vh solid $color-text-on-main-foto;
+                            width: 40%;
+                            height: 5%;
+                            margin-bottom: 20%;
+                            &:hover{
+                                transform: scale(1.01);
+                                border: .6vh solid rgba(255, 255, 255, 0.253);
+                                color: rgb(255, 255, 255);}}}}}
+            /*Cамые продоваемые товары*/
+            .tovar_block{
+                visibility: hidden;
+                }}
+        /*Подвал сайиа*/
+        footer{
+            margin-top: -25vh;
+            display: flex;
+            flex-direction: column;
+            background: black;
+            height: 30vh;
+            h1{
+                margin-top: 1vh;
+                color: white;
+                text-align: center;
+                font-size: 2vh;
+                height: 0vh;}
+            /*Верхний контент подвала*/
+            .f_top{
+                display: flex;
+                justify-content: space-around;
+                margin: 2vh;
+                .niz{
+                    display: flex;
+                    margin: 1vh;
+                    justify-content: center;
+                    line-height: 3vh;
+                    color: $color-main-text;
+                    width: 30vh;
+                    height: 1vh;}
+                .niz_v{margin: 1vh; color: #000000;}
+                ol{visibility: hidden}}
+            /*Центральный контент подвала*/
+            .f_center{
+                width: 100%;
+                height: 13vh;
+                .f_center_f{
+                    margin: 10vh 1vh 0vh 0vh;
+                    border-bottom: 0.4vh solid rgb(255, 255, 255);}
+                .logo_fot{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        position: absolute;
+                        margin-top: 15vh;
+                        width: 20vh;
+                        height: 15vh;}}}
+            /*Нижний контент подвала*/
+            .f_bottom{
+                font-size: 70%;
+                margin-left: 5vh;
+                margin-top: 1vh;
+                color: white;}}}}

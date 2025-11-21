@@ -1,0 +1,286 @@
+$color-background-main: #161616;
+$color-text-header-top: #FFFFFF;
+$color-background-header-top: #000000;
+$color-icon-fon: #7F7F7F;
+$color-background-header-bottom: #161616;
+$color-text-header-bottom: #7F7F7F;
+$color-text-on-main-foto: #FFFFFF;
+$color-zagolovok: #FFFFFF;
+$color-main-text: #7F7F7F;
+$color-background-footer: #000000;
+$color-zagolovok-footer: #FFFFFF;
+$color-footer-text: #7F7F7F;
+$color-block: #252525;
+/*Строка посика*/
+.search {
+    position: absolute;
+    margin-left: -6vh;
+    margin-top: 0vh;
+    width: 5vh;
+    height: 5vh;
+    overflow: hidden;
+    background: $color-block;
+    border-radius: 6vh;
+    transition: .5s;}
+.search .icon{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4vh;
+    height: 4vh;
+    color: $color-background-header-top;
+    font-size: 3vh;
+    background: $color-zagolovok;
+    border-radius: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;}
+.search.active {
+    width: 30vh;
+    margin-left: -31vh}  
+.search .input {
+    overflow: hidden;
+    position: relative;
+    width: 30vh;
+    height: 6vh;
+    left: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+.search .input input {
+    position: absolute;
+    background: none;
+    font-weight: 600;
+    color: $color-zagolovok;
+    top: 1vh;
+    left: 0;
+    width: 100%;
+    border: 100%;
+    border: none;
+    outline: none;
+    padding: .6vh 0;
+    font-size: 1.5vh}
+.clean {
+    color: $color-zagolovok;
+    overflow: hidden;
+    position: absolute;
+    top: 2vh;
+    margin-right: 6vh;
+    right: 2vh;
+    width: 1.5vh;
+    height: 1.5vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center}
+/*Окно регистрации*/
+.modal{
+    z-index: 11;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    transition: opacity .4s, visibility .4s;
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-background-header-top;
+        opacity: 0.7;
+        z-index: 20;}}
+.modal.open{
+    visibility: visible;}
+.modal.open .modal-window{
+    transition: all 1s ease;}
+.modal-window{
+    overflow: hidden;
+    color: $color-zagolovok;
+    display: flex;
+    flex-direction: column;
+    transition: all 1s ease;
+    position: relative;
+    border-radius: 5vh;
+    z-index: 21;
+    width: 40vh;
+    height: 50vh;
+    border-radius: 1vh;
+    box-shadow: 0vh 1vh 1vh $color-background-header-top;
+    background-color: $color-block;
+    transition: transform .8s;
+    padding: 5vh 3vh 0vh 3vh;
+    h1{
+        text-align: center;
+        font-size: 30px;
+        margin-top: -5vh;
+        line-height: 10vh;}
+    h2{
+        color: $color-zagolovok;
+        font-size: 18px;
+        line-height: 5vh;}
+    .login{
+        display: flex;
+        align-items: center;
+        width: 300px;
+        justify-content: center;
+        background: #414040;
+        border-radius: 1vh;
+        height: 4vh;
+        line-height: 10vh;
+        input{
+            width: 250px;
+            color: $color-zagolovok;
+            border: none;
+            background: none;
+            outline: none;}}
+    button{
+        margin-left: 6.5vh;
+        border-radius: 1vh;
+        color: $color-zagolovok;
+        background: rgba(0, 0, 0, 0);
+        border: 0.4vh solid white;
+        font-size: 2vh;
+        margin-top: 4vh;
+        height: 5vh;
+        width: 10vw;
+        &:hover{
+            transform: scale(1.01);
+            border: .6vh solid rgba(255, 255, 255, 0.253);
+            color: $color-zagolovok}}}
+/*Кнопка закрыть*/
+#btn-close{
+    position: absolute;
+    cursor: pointer;
+    left: 20vh;
+    color: $color-zagolovok;
+    font-size: 1.5vh;
+    top: -1.2vh;
+    border: none;
+    background: none;
+    opacity: .7;
+    &:hover{opacity: 1;}}
+/*Окно покупки*/
+.modal_2{
+    z-index: 11;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    transition: opacity .4s, visibility .4s;
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-background-header-top;
+        opacity: 0.7;
+        z-index: 20;}}
+.modal_2.open_2{
+    visibility: visible;}
+.modal_2.open_2 .modal-window_2{
+    transition: all 1s ease}
+.modal-window_2{
+    overflow: hidden;
+    color: $color-zagolovok;
+    display: flex;
+    flex-direction: column;
+    transition: all 1s ease;
+    position: relative;
+    border-radius: 5vh;
+    margin-top: -45vh;
+    margin-left: 160vh;
+    z-index: 21;
+    width: 40vh;
+    height: 55vh;
+    border-radius: 1vh;
+    box-shadow: 0vh 1vh 1vh $color-background-header-top;
+    background-color: $color-block;
+    transition: transform .8s;
+    padding: 5vh 3vh 0vh 3vh;
+    line-height: 10vh;
+    h1{
+        margin-top: 5vh;
+        font-size: 30px;
+        border-top: 0.5vh solid $color-zagolovok;
+        border-bottom: 0.5vh solid $color-zagolovok}
+    .oplata{
+        display: flex;
+        justify-content: space-between;
+        border-top: 0.5vh solid $color-zagolovok;
+        padding: px;
+        margin: 2vh;}
+    h3{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 2vh;
+        height: 5vh;
+        width: 100%;
+        padding: 1vh;
+        margin: 2vh;}
+    h2{font-size: 2.5vh;}
+    h4{font-size: 2vh;}
+    .promo{
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.3vh solid $color-zagolovok;
+        color: $color-zagolovok;
+        padding: 8px;
+        background: rgba(0, 0, 0, 0);
+        &:hover{
+            transform: scale(1.01);
+            border: .3vh solid rgba(255, 255, 255, 0.253);
+            color: $color-zagolovok}}
+    .opl{
+        width: 200px;
+        border: 0.5vh solid $color-zagolovok;
+        color: $color-zagolovok;
+        padding: 8px;;
+        background: rgba(0, 0, 0, 0);
+        &:hover{
+            transform: scale(1.01);
+            border: .6vh solid rgba(255, 255, 255, 0.253);
+            color: $color-zagolovok}}
+    .promo_big{
+        display: flex;
+        justify-content: space-around;
+        input{
+            color: $color-zagolovok;
+            border: none;
+            outline: none;
+            background: none}}
+    .opl-2{display: flex; justify-content: center}}
+/*Кнопка закрыть*/
+#btn-close_2{
+    position: absolute;
+    width: 80%;
+    cursor: pointer;
+    text-align: center;
+    color: $color-zagolovok;
+    font-size: 16px;
+    border: none;
+    background: none;
+    opacity: .7;
+    &:hover{opacity: 1;}}
+button{border: none;}
+.otsp{
+    margin-bottom: 10vh;
+}

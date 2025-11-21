@@ -1,0 +1,337 @@
+@charset "UTF-8";
+/*Строка посика*/
+.search {
+  position: absolute;
+  margin-left: -6vh;
+  margin-top: 0vh;
+  width: 5vh;
+  height: 5vh;
+  overflow: hidden;
+  background: #252525;
+  border-radius: 6vh;
+  transition: 0.5s;
+}
+
+.search .icon {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4vh;
+  height: 4vh;
+  color: #000000;
+  font-size: 3vh;
+  background: #FFFFFF;
+  border-radius: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search.active {
+  width: 30vh;
+  margin-left: -31vh;
+}
+
+.search .input {
+  overflow: hidden;
+  position: relative;
+  width: 30vh;
+  height: 6vh;
+  left: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search .input input {
+  position: absolute;
+  background: none;
+  font-weight: 600;
+  color: #FFFFFF;
+  top: 1vh;
+  left: 0;
+  width: 100%;
+  border: 100%;
+  border: none;
+  outline: none;
+  padding: 0.6vh 0;
+  font-size: 1.5vh;
+}
+
+.clean {
+  color: #FFFFFF;
+  overflow: hidden;
+  position: absolute;
+  top: 2vh;
+  margin-right: 6vh;
+  right: 2vh;
+  width: 1.5vh;
+  height: 1.5vh;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Окно регистрации*/
+.modal {
+  z-index: 11;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+.modal .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.7;
+  z-index: 20;
+}
+
+.modal.open {
+  visibility: visible;
+}
+
+.modal.open .modal-window {
+  transition: all 1s ease;
+}
+
+.modal-window {
+  overflow: hidden;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  transition: all 1s ease;
+  position: relative;
+  border-radius: 5vh;
+  z-index: 21;
+  width: 40vh;
+  height: 50vh;
+  border-radius: 1vh;
+  box-shadow: 0vh 1vh 1vh #000000;
+  background-color: #252525;
+  transition: transform 0.8s;
+  padding: 5vh 3vh 0vh 3vh;
+}
+.modal-window h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: -5vh;
+  line-height: 10vh;
+}
+.modal-window h2 {
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 5vh;
+}
+.modal-window .login {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  justify-content: center;
+  background: #414040;
+  border-radius: 1vh;
+  height: 4vh;
+  line-height: 10vh;
+}
+.modal-window .login input {
+  width: 250px;
+  color: #FFFFFF;
+  border: none;
+  background: none;
+  outline: none;
+}
+.modal-window button {
+  margin-left: 6.5vh;
+  border-radius: 1vh;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0);
+  border: 0.4vh solid white;
+  font-size: 2vh;
+  margin-top: 4vh;
+  height: 5vh;
+  width: 10vw;
+}
+.modal-window button:hover {
+  transform: scale(1.01);
+  border: 0.6vh solid rgba(255, 255, 255, 0.253);
+  color: #FFFFFF;
+}
+
+/*Кнопка закрыть*/
+#btn-close {
+  position: absolute;
+  cursor: pointer;
+  left: 20vh;
+  color: #FFFFFF;
+  font-size: 1.5vh;
+  top: -1.2vh;
+  border: none;
+  background: none;
+  opacity: 0.7;
+}
+#btn-close:hover {
+  opacity: 1;
+}
+
+/*Окно покупки*/
+.modal_2 {
+  z-index: 11;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+.modal_2 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.7;
+  z-index: 20;
+}
+
+.modal_2.open_2 {
+  visibility: visible;
+}
+
+.modal_2.open_2 .modal-window_2 {
+  transition: all 1s ease;
+}
+
+.modal-window_2 {
+  overflow: hidden;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  transition: all 1s ease;
+  position: relative;
+  border-radius: 5vh;
+  margin-top: -45vh;
+  margin-left: 160vh;
+  z-index: 21;
+  width: 40vh;
+  height: 55vh;
+  border-radius: 1vh;
+  box-shadow: 0vh 1vh 1vh #000000;
+  background-color: #252525;
+  transition: transform 0.8s;
+  padding: 5vh 3vh 0vh 3vh;
+  line-height: 10vh;
+}
+.modal-window_2 h1 {
+  margin-top: 5vh;
+  font-size: 30px;
+  border-top: 0.5vh solid #FFFFFF;
+  border-bottom: 0.5vh solid #FFFFFF;
+}
+.modal-window_2 .oplata {
+  display: flex;
+  justify-content: space-between;
+  border-top: 0.5vh solid #FFFFFF;
+  padding: px;
+  margin: 2vh;
+}
+.modal-window_2 h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2vh;
+  height: 5vh;
+  width: 100%;
+  padding: 1vh;
+  margin: 2vh;
+}
+.modal-window_2 h2 {
+  font-size: 2.5vh;
+}
+.modal-window_2 h4 {
+  font-size: 2vh;
+}
+.modal-window_2 .promo {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.3vh solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0);
+}
+.modal-window_2 .promo:hover {
+  transform: scale(1.01);
+  border: 0.3vh solid rgba(255, 255, 255, 0.253);
+  color: #FFFFFF;
+}
+.modal-window_2 .opl {
+  width: 200px;
+  border: 0.5vh solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0);
+}
+.modal-window_2 .opl:hover {
+  transform: scale(1.01);
+  border: 0.6vh solid rgba(255, 255, 255, 0.253);
+  color: #FFFFFF;
+}
+.modal-window_2 .promo_big {
+  display: flex;
+  justify-content: space-around;
+}
+.modal-window_2 .promo_big input {
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+  background: none;
+}
+.modal-window_2 .opl-2 {
+  display: flex;
+  justify-content: center;
+}
+
+/*Кнопка закрыть*/
+#btn-close_2 {
+  position: absolute;
+  width: 80%;
+  cursor: pointer;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 16px;
+  border: none;
+  background: none;
+  opacity: 0.7;
+}
+#btn-close_2:hover {
+  opacity: 1;
+}
+
+button {
+  border: none;
+}
+
+.otsp {
+  margin-bottom: 10vh;
+}/*# sourceMappingURL=dop_style.css.map */
