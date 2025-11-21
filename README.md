@@ -1,4 +1,4 @@
-# Comfort - Мебельный landing page
+# Comfort - Мебельный landing
 
 ![Comfort Furniture Preview](img/main_foto.PNG)
 
